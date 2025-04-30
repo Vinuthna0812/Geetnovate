@@ -147,7 +147,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import PatientOverview from '../components/dashboard/PatientOverview';
 import TodaysMedications from '../components/dashboard/TodaysMedications';
-import RecentSymptoms from '../components/dashboard/RecentSymptoms';
+//import RecentSymptoms from '../components/dashboard/RecentSymptoms';
 import RecoveryGraph from '../components/analytics/RecoveryGraph';
 import { Medication, Symptom } from '../types';
 
@@ -228,7 +228,7 @@ const Dashboard: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <h2 className="text-2xl font-bold mb-4">Hi, {username}!</h2>
-      <PatientOverview 
+      {/* <PatientOverview 
         name={patientData.name} 
         diagnosis={patientData.diagnosis} 
         status={patientData.status} 
@@ -237,14 +237,14 @@ const Dashboard: React.FC = () => {
         medicationAdherence={patientData.medicationAdherence} 
         vitalsSummary={patientData.vitalsSummary} 
         username={username} 
-      />
+      /> */}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 my-6">
         <div className="lg:col-span-2">
           {/* Add any additional analytics or chart components here */}
         </div>
         <div>
-          <TodaysMedications medications={patientData.medications} />
+          {/* <TodaysMedications medications={patientData.medications} /> */}
         </div>
       </div>
 
@@ -256,7 +256,7 @@ const Dashboard: React.FC = () => {
           />
         </div>
         <div className="my-6">
-          <RecoveryGraph recoveryScores={patientData.recoveryScores || []} />
+          {/* <RecoveryGraph recoveryScores={patientData.recoveryScores || []} /> */}
         </div>
         <div className="lg:col-span-2"></div>
       </div>
